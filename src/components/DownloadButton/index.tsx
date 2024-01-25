@@ -15,5 +15,15 @@ export const DownloadButton = (props: DownloadButtonProps) => {
     link.click();
   };
 
-  return <Button onClick={() => handleDownload()}>{props.children}</Button>;
+  return (
+    <Button
+      sx={{
+        background: "linear-gradient(45deg,#1D5B79, #468B97)",
+      }}
+      variant="contained"
+      onClick={() => handleDownload()}
+    >
+      {props.children}
+    </Button>
+  );
 };

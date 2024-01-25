@@ -46,7 +46,7 @@ export const ProjectScreen = () => {
         justifyContent="center"
         alignContent="center"
       >
-        <Typography variant="h4" color="primary">
+        <Typography color="#ffffff" variant="h4">
           Projects
         </Typography>
         <Grid

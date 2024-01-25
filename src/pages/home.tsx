@@ -127,14 +127,14 @@ export const HomeScreen = () => {
                 fontSize={30}
                 color="#ffffff"
                 speed={60}
-                text="hello"
+                text="Hi I am Ajith Kumar"
               />
             </Grid>
             <Grid item md={12} sm={12} textAlign="center">
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ duration: 0.8, delay: 1 }}
+                transition={{ duration: 1, delay: 1 }}
               >
                 <TypeWritter
                   fontSize={20}
@@ -175,7 +175,13 @@ export const HomeScreen = () => {
                   animate={{ opacity: 1 }}
                   transition={{ duration: 1.5, delay: 2.5 }}
                 >
-                  <Button sx={{ marginRight: "20px" }} variant="contained">
+                  <Button
+                    sx={{
+                      marginRight: "20px",
+                      background: "linear-gradient(45deg,#1D5B79, #468B97)",
+                    }}
+                    variant="contained"
+                  >
                     contact me
                   </Button>
                   <DownloadButton path={resumePath}>Download CV</DownloadButton>

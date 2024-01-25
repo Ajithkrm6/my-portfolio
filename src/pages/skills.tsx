@@ -35,7 +35,7 @@ export const SkillScreen = () => {
         justifyContent="center"
         alignContent="center"
       >
-        <Typography textAlign="start" variant="h4" color="primary">
+        <Typography textAlign="start" variant="h4" color="#ffffff">
           Skills
         </Typography>
 

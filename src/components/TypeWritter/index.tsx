@@ -39,7 +39,16 @@ export const TypeWritter: FC<TypeWritterProps> = ({
 
   return (
     <Grid>
-      <Typography fontSize={props.fontSize} color={color}>
+      <Typography
+        sx={{
+          background: "linear-gradient(45deg,#1D5B79, #84D2C5)",
+          WebkitBackgroundClip: "text",
+          color: "transparent",
+          fontWeight: "bold",
+        }}
+        fontSize={props.fontSize}
+        color={color}
+      >
         {writtingText}
       </Typography>
     </Grid>

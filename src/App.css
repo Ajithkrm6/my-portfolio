@@ -6,6 +6,15 @@
   height: 40vmin;
   pointer-events: none;
 }
+::-webkit-scrollbar {
+  display: none;
+}
+
+.body {
+  /* scrollbar-width: thin;
+  scrollbar-color: transparent transparent; */
+  width: 100%;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -35,4 +44,120 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.logoImage {
+  height: 55px;
+  width: 55px;
+}
+
+.headerContainer {
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  size: cover;
+  height: 100vh; /* Adjust the height as needed */
+  overflow: hidden;
+  /* background: linear-gradient(to bottom right, #faa7b8, #031b88); */
+}
+
+/* .background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: -1;
+  object-fit: cover;
+}
+
+@media (max-width: 600px) {
+  .video-container {
+    height: auto;
+  }
+
+  .background-video {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+} */
+
+.content-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.mainContainer {
+  background: linear-gradient(20deg, #000000, #313866, #000000);
+  background-size: cover;
+  height: 100%;
+}
+
+.homeContainer {
+  /* background: linear-gradient(145deg, #000000, #6f459e, #313866, #6f459e); */
+  /* background-image: url(./assets/images/lappy.jpg); */
+  /* background: conic-gradient(from 0deg, #000000, #333333, #ffffff); */
+  /* background: radial-gradient(circle, #dcf2f1, #12343b, #001a33); */
+  /* background: radial-gradient(
+    farthest-corner at center,
+    #dcf2f1,
+    #12343b,
+    #001a33
+  ); */
+
+  /* background: radial-gradient(closest-side, #12343b, #0f0f0f); */
+  /* background: radial-gradient(closest-corner, #c499f3, #6c22a6, #0f0f0f); */
+  /* background: radial-gradient(farthest-side, #6c22a6, #0f0f0f); */
+
+  /* background: repeating-linear-gradient(45deg, #dcf2f1, #12343b, #001a33 100px); */
+
+  /* background: conic-gradient(from 0deg, #dcf2f1, #12343b, #001a33); */
+
+  background-size: cover;
+
+  height: 100vh;
+}
+
+.skillsContainer {
+  /* background-image: url("./assets//images/keyboard.jpg"); */
+  /* background: linear-gradient(145deg, #000000, #313866, #6f459e); */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  overflow-y: auto; /* Enable vertical scrolling */
+  max-height: 100vh;
+}
+
+.projectsConatiner {
+  /* background-image: url("./assets//images/syntax.jpg"); */
+  /* background: linear-gradient(145deg, #000000, #313866, #6f459e); */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.glassomorphic {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }

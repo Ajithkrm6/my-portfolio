@@ -111,7 +111,7 @@ export const ContactScreen = () => {
                 alignContent="center"
                 textAlign="center"
               >
-                <Button>Submit</Button>
+                <Button variant="contained">Submit</Button>
               </Grid>
 
               <Grid

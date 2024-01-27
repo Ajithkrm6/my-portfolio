@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import {
   Grid,
   OutlinedInput,
@@ -13,14 +13,37 @@ import instagram from "../assets/images/5296765_camera_instagram_instagram logo_
 import gitLab from "../assets/images/gitlab-logo-200.png";
 import gitHub from "../assets/images/pngimg.com - github_PNG85.png";
 import linkedIN from "../assets/images/linkedin-logo-png-2026.png";
+import emailjs from "@emailjs/browser";
 
 export const ContactScreen = () => {
+  const form = useRef<HTMLFormElement>(null);
+
+  const sendEmail = (e: any) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_zh9bu2m",
+        "template_mp37cf5",
+        form.current!,
+        "gJID15N1bgTiFOHwM"
+      )
+      .then(
+        (result: any) => {
+          console.log(result.text);
+        },
+        (error: any) => {
+          console.log(error.text);
+        }
+      );
+  };
+
   const Section = styled("section")({
     height: "100%",
     width: "100%",
   });
   return (
-    <Section id="contact">
+    <Section id="contact" data-aos="zoom-in">
       <Typography textAlign="start" variant="h4" color="#ffffff">
         Contact
       </Typography>
@@ -75,85 +98,91 @@ export const ContactScreen = () => {
               height="100%"
               spacing={2}
             >
-              <Grid
-                item
-                display="flex"
-                flexDirection="column"
-                justifyContent="center"
-                alignItems="center"
-                spacing={2}
-              >
-                <Grid>
-                  <Typography textAlign="start" color="#ffffff">
-                    Name
-                  </Typography>
-                  <OutlinedInput
-                    sx={{
-                      borderStyle: "solid",
-                      borderWidth: "0.5px",
-                      borderColor: "#ffffff",
-                    }}
-                  />
-                </Grid>
-              </Grid>
-              <Grid
-                item
-                display="flex"
-                flexDirection="column"
-                justifyContent="center"
-                alignItems="center"
-                spacing={2}
-              >
-                <Grid>
-                  <Typography textAlign="start" color="#ffffff">
-                    Subject
-                  </Typography>
-                  <OutlinedInput
-                    sx={{
-                      borderStyle: "solid",
-                      borderWidth: "0.5px",
-                      borderColor: "#ffffff",
-                    }}
-                  />
-                </Grid>
-              </Grid>
-              <Grid
-                item
-                display="flex"
-                flexDirection="column"
-                justifyContent="center"
-                alignItems="center"
-                spacing={2}
-              >
-                <Grid>
-                  <Typography textAlign="start" color="#ffffff">
-                    Message
-                  </Typography>
-                  <TextField
-                    sx={{
-                      borderStyle: "solid",
-                      borderWidth: "0.5px",
-                      borderColor: "#ffffff",
-                    }}
-                  />
-                </Grid>
-              </Grid>
-              <Grid
-                item
-                justifyContent="center"
-                alignContent="center"
-                textAlign="center"
-              >
-                <Button
-                  sx={{
-                    background: "linear-gradient(45deg,#1D5B79, #468B97)",
-                  }}
-                  variant="contained"
+              <form ref={form} onSubmit={sendEmail}>
+                <Grid
+                  item
+                  display="flex"
+                  flexDirection="column"
+                  justifyContent="center"
+                  alignItems="center"
+                  spacing={2}
                 >
-                  Submit
-                </Button>
-              </Grid>
-
+                  <Grid>
+                    <Typography textAlign="start" color="#ffffff">
+                      Name
+                    </Typography>
+                    <OutlinedInput
+                      name="user_name"
+                      sx={{
+                        borderStyle: "solid",
+                        borderWidth: "0.5px",
+                        borderColor: "#ffffff",
+                      }}
+                    />
+                  </Grid>
+                </Grid>
+                <Grid
+                  item
+                  display="flex"
+                  flexDirection="column"
+                  justifyContent="center"
+                  alignItems="center"
+                  spacing={2}
+                >
+                  <Grid>
+                    <Typography textAlign="start" color="#ffffff">
+                      Email
+                    </Typography>
+                    <OutlinedInput
+                      name="user_email"
+                      sx={{
+                        borderStyle: "solid",
+                        borderWidth: "0.5px",
+                        borderColor: "#ffffff",
+                      }}
+                    />
+                  </Grid>
+                </Grid>
+                <Grid
+                  item
+                  display="flex"
+                  flexDirection="column"
+                  justifyContent="center"
+                  alignItems="center"
+                  spacing={2}
+                >
+                  <Grid>
+                    <Typography textAlign="start" color="#ffffff">
+                      Message
+                    </Typography>
+                    <TextField
+                      name="message"
+                      sx={{
+                        borderStyle: "solid",
+                        borderWidth: "0.5px",
+                        borderColor: "#ffffff",
+                      }}
+                    />
+                  </Grid>
+                </Grid>
+                <Grid
+                  paddingTop={2}
+                  item
+                  justifyContent="center"
+                  alignContent="center"
+                  textAlign="center"
+                >
+                  <Button
+                    type="submit"
+                    sx={{
+                      background: "linear-gradient(45deg,#1D5B79, #468B97)",
+                    }}
+                    variant="contained"
+                  >
+                    Submit
+                  </Button>
+                </Grid>
+              </form>
               <Grid
                 item
                 padding={1}

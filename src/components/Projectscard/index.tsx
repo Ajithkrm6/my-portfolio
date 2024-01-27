@@ -11,7 +11,7 @@ export interface ProjectCardProps {
   sm?: number;
   description?: string;
   link?: string;
-  onClick?: () => void;
+  onClick: () => void;
 }
 
 export const ProjectCard = (props: ProjectCardProps) => {
@@ -42,13 +42,33 @@ export const ProjectCard = (props: ProjectCardProps) => {
           paddingBottom={1}
         >
           <Grid item>
-            <ChevronLeftIcon sx={{ color: "#ffffff" }} />
+            <ChevronLeftIcon
+              sx={{
+                background: "linear-gradient(45deg,#84D2C5,#EEE7DA,#84D2C5)",
+                WebkitBackgroundClip: "text",
+                color: "transparent",
+              }}
+            />
           </Grid>
           <Grid item>
-            <Typography color="#ffffff">{props.lable}</Typography>
+            <Typography
+              sx={{
+                background: "linear-gradient(45deg,#84D2C5,#EEE7DA,#84D2C5)",
+                WebkitBackgroundClip: "text",
+                color: "transparent",
+              }}
+            >
+              {props.lable}
+            </Typography>
           </Grid>
           <Grid item>
-            <ChevronRightIcon sx={{ color: "#ffffff" }} />
+            <ChevronRightIcon
+              sx={{
+                background: "linear-gradient(45deg,#84D2C5,#EEE7DA,#84D2C5)",
+                WebkitBackgroundClip: "text",
+                color: "transparent",
+              }}
+            />
           </Grid>
         </Grid>
 
@@ -62,11 +82,28 @@ export const ProjectCard = (props: ProjectCardProps) => {
         />
 
         <Grid container paddingTop={1}>
-          <Typography color="#ffffff" textAlign="start">
+          <Typography
+            sx={{
+              background: "linear-gradient(45deg,#84D2C5,#EEE7DA,#84D2C5)",
+              WebkitBackgroundClip: "text",
+              color: "transparent",
+            }}
+            textAlign="start"
+          >
             Description: {props.description}
           </Typography>
         </Grid>
-        <Button>view more</Button>
+        <Button
+          sx={{
+            marginRight: "20px",
+            background: "linear-gradient(45deg,#1D5B79, #468B97)",
+            marginTop: "10px",
+          }}
+          variant="contained"
+          onClick={() => props.onClick()}
+        >
+          view more
+        </Button>
       </Card>
     </Grid>
   );

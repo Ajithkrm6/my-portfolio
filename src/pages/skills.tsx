@@ -28,16 +28,21 @@ export const SkillScreen = () => {
   });
 
   return (
-    <Section id="skills">
+    <Section id="skills" data-aos="zoom-in">
+      <Grid>
+        <Typography textAlign="start" variant="h4" color="#ffffff">
+          Skills
+        </Typography>
+      </Grid>
       <Grid
         container
         flexDirection="column"
         justifyContent="center"
         alignContent="center"
       >
-        <Typography textAlign="start" variant="h4" color="#ffffff">
+        {/* <Typography textAlign="start" variant="h4" color="#ffffff">
           Skills
-        </Typography>
+        </Typography> */}
 
         <Grid
           paddingTop="30px"

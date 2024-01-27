@@ -9,7 +9,13 @@ export default {
 };
 
 export const main = (args: any) => {
-  return <ProjectCard img={giftcard} {...args} />;
+  return (
+    <ProjectCard
+      img={giftcard}
+      {...args}
+      onClick={() => console.log("printing")}
+    />
+  );
 };
 
 main.args = {

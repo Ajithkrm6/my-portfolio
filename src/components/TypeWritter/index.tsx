@@ -7,7 +7,7 @@ import React, {
   useRef,
   createRef,
 } from "react";
-import { Grid } from "@mui/material";
+import { Grid, SxProps } from "@mui/material";
 
 export interface TypeWritterProps {
   speed: number;
@@ -15,6 +15,9 @@ export interface TypeWritterProps {
   color?: string;
   backgroundGradient?: () => void;
   fontSize?: number;
+  sx?: SxProps;
+  highliterText?: string;
+  highlighterSx?: SxProps;
 }
 
 export const TypeWritter: FC<TypeWritterProps> = ({
@@ -22,6 +25,7 @@ export const TypeWritter: FC<TypeWritterProps> = ({
   text,
   color,
   backgroundGradient,
+  sx,
   ...props
 }) => {
   const [writtingText, setWrittingText] = useState("");
@@ -41,13 +45,8 @@ export const TypeWritter: FC<TypeWritterProps> = ({
     <Grid>
       <Typography
         sx={{
-          background: "linear-gradient(45deg,#1D5B79, #84D2C5)",
-          WebkitBackgroundClip: "text",
-          color: "transparent",
-          fontWeight: "bold",
+          ...sx,
         }}
-        fontSize={props.fontSize}
-        color={color}
       >
         {writtingText}
       </Typography>

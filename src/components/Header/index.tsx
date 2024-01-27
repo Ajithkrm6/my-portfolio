@@ -1,4 +1,4 @@
-import React, { ReactNode, useState } from "react";
+import React, { ReactNode, useState, FC } from "react";
 import {
   AppBar,
   Toolbar,
@@ -14,6 +14,7 @@ import {
   Hidden,
   ListItemButton,
   Paper,
+  SxProps,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 
@@ -22,9 +23,10 @@ import { HashLink as Link } from "react-router-hash-link";
 export interface HeaderProps {
   children?: ReactNode;
   customPosition?: "fixed" | "absolute" | "sticky" | "static" | "relative";
+  sx?: SxProps;
 }
 
-export const Header = (props: HeaderProps) => {
+export const Header: FC<HeaderProps> = ({ children, customPosition, sx }) => {
   const [isDrawerOpen, setDrawerOpen] = useState(false);
   const [value, setValue] = useState("");
   const logo = require("../../assets/images/logo8.png");
@@ -53,7 +55,7 @@ export const Header = (props: HeaderProps) => {
   return (
     <>
       <AppBar
-        position={props.customPosition}
+        position={customPosition}
         sx={{
           background: "rgba(255, 255, 255, 0.2)",
           position: "fixed",
@@ -82,7 +84,7 @@ export const Header = (props: HeaderProps) => {
                 sm={6}
               >
                 <img src={logo} className="logoImage" />
-                <Typography>{props.children}</Typography>
+                <Typography sx={{ ...sx }}>{children}</Typography>
               </Grid>
               <Grid
                 item
@@ -189,7 +191,7 @@ export const Header = (props: HeaderProps) => {
                 sm={6}
               >
                 <img src={logo} className="logoImage" />
-                <Typography color="#feda6a">{props.children}</Typography>
+                <Typography sx={{ ...sx }}>{children}</Typography>
               </Grid>
             </Grid>
 

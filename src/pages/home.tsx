@@ -64,7 +64,7 @@ export const HomeScreen = () => {
   }, [offSetY]);
 
   return (
-    <Section id="home">
+    <Section id="home" data-aos="zoom-in">
       <Grid
         height="100vh"
         display="flex"
@@ -93,8 +93,8 @@ export const HomeScreen = () => {
             >
               <Card
                 sx={{
-                  height: "25%",
-                  width: "50%",
+                  height: "30%",
+                  width: "60%",
                   background: "rgba(255, 255, 255, 0.2)",
                   backdropFilter: "blur(5px)",
                   webkitBackdropFilter: "blur(5px)",
@@ -124,21 +124,36 @@ export const HomeScreen = () => {
               textAlign="center"
             >
               <TypeWritter
-                fontSize={30}
-                color="#ffffff"
-                speed={60}
-                text="Hi I am Ajith Kumar"
+                // fontSize={30}
+                // color="#ffffff"
+                sx={{
+                  fontSize: "30px",
+                  background: "linear-gradient(45deg,#1D5B79, #84D2C5)",
+                  WebkitBackgroundClip: "text",
+                  color: "transparent",
+                  fontWeight: "bold",
+                  paddingTop: "15px",
+                }}
+                speed={50}
+                text="Ajith kumar"
               />
             </Grid>
             <Grid item md={12} sm={12} textAlign="center">
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ duration: 1, delay: 1 }}
+                transition={{ duration: 1, delay: 0.8 }}
               >
                 <TypeWritter
-                  fontSize={20}
-                  color="#ffffff"
+                  // fontSize={20}
+                  // color="#ffffff"
+                  sx={{
+                    fontSize: "20px",
+                    background: "linear-gradient(45deg,#1D5B79, #84D2C5)",
+                    WebkitBackgroundClip: "text",
+                    color: "transparent",
+                    fontWeight: "bold",
+                  }}
                   speed={60}
                   text="Front End Developer"
                 />
@@ -147,21 +162,18 @@ export const HomeScreen = () => {
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ duration: 1, delay: 2 }}
+              transition={{ duration: 1.5, delay: 2 }}
             >
-              <Typography textAlign="center" color="#ffffff">
-                As a front-end developer, the primary focus is on crafting
-                engaging and user-friendly experiences on the web. This involves
-                translating design mockups into responsive and interactive
-                interfaces using a combination of HTML, CSS, and JavaScript.
-                Attention to detail is paramount, ensuring that the visual
-                elements align with the overall design aesthetic and brand
-                identity. Front-end developers often collaborate closely with
-                UX/UI designers to bring their creative visions to life. Keeping
-                up with the latest web technologies and trends is crucial, as it
-                empowers developers to build modern and efficient web
-                applications that deliver a seamless user experience across
-                various devices and browsers.
+              <Typography textAlign="center" color="#ffffff" padding={2}>
+                Hello! I'm Ajith Kumar, a passionate Front End Developer with
+                1.7 years of hands-on experience in crafting engaging and
+                responsive web applications. My expertise spans a range of
+                front-end technologies, including HTML, CSS, JavaScript,
+                React.js, Redux, Next.js, TypeScript, React Native, and SQL. I
+                had the privilege of contributing my skills to Flying Fox Labs
+                as a Software Developer. Explore the projects in my portfolio to
+                witness firsthand the innovative solutions I've brought to life.
+                Let's build exceptional digital experiences together!
               </Typography>
               <Grid
                 item
@@ -173,7 +185,7 @@ export const HomeScreen = () => {
                 <motion.div
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
-                  transition={{ duration: 1.5, delay: 2.5 }}
+                  transition={{ duration: 2.5, delay: 2.8 }}
                 >
                   <Button
                     sx={{

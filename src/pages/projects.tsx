@@ -203,6 +203,7 @@ export const ProjectScreen = () => {
                   >
                     <img
                       src={(project as Project).img}
+                      alt="project img"
                       style={{ width: "75%" }}
                     />
                   </Grid>
@@ -235,12 +236,6 @@ export const ProjectScreen = () => {
                         color="#FAF1E4"
                         fontSize={15}
                         fontWeight={900}
-                        // sx={{
-                        //   background:
-                        //     "linear-gradient(45deg,#29ADB2,#419197,#EEE7DA,#29ADB2)",
-                        //   WebkitBackgroundClip: "text",
-                        //   color: "transparent",
-                        // }}
                       >
                         {(project as Project).detailedDescription}
                       </Typography>
@@ -249,7 +244,6 @@ export const ProjectScreen = () => {
                       fontFamily="cursive"
                       fontSize={20}
                       fontWeight={900}
-                      // color="#ffffff"
                       sx={{
                         background:
                           "linear-gradient(180deg,#84D2C5,#EEE7DA,#84D2C5)",
@@ -263,12 +257,6 @@ export const ProjectScreen = () => {
                         color="#FAF1E4"
                         fontSize={15}
                         fontWeight={700}
-
-                        // sx={{
-                        //   background: "linear-gradient(45deg,#EEE7DA,#419197)",
-                        //   WebkitBackgroundClip: "text",
-                        //   color: "transparent",
-                        // }}
                       >
                         {(project as Project).role}
                       </Typography>
@@ -284,11 +272,9 @@ export const ProjectScreen = () => {
                       </Typography>
                     )}
                     <Typography
-                      // className="proInfoText"
                       fontFamily="cursive"
                       fontWeight={900}
                       fontSize={20}
-                      // color="#ffffff"
                       sx={{
                         background:
                           "linear-gradient(180deg,#84D2C5,#EEE7DA,#84D2C5)",
@@ -302,12 +288,6 @@ export const ProjectScreen = () => {
                         color="#FAF1E4"
                         fontSize={15}
                         fontWeight={700}
-                        // sx={{
-                        //   background:
-                        //     "linear-gradient(45deg,#EEE7DA,#29ADB2,#419197,#29ADB2)",
-                        //   WebkitBackgroundClip: "text",
-                        //   color: "transparent",
-                        // }}
                       >
                         {(project as Project).technologiesUsed}
                       </Typography>
@@ -318,25 +298,7 @@ export const ProjectScreen = () => {
             </Grid>
           </Container>
         </Modal>
-        {/* </Grid> */}
       </Grid>
     </Section>
   );
 };
-
-{
-  /* <Typography color="#ffffff">Projects</Typography>
-        {projectData.map((item, index) => (
-          <Grid item key={index}>
-            <ProjectCard
-              md={4}
-              sm={3}
-              img={giftCards}
-              lable={item.title}
-              description={item.description}
-              link="View More"
-              onClick={() => setProject(item)}
-            />
-          </Grid>
-        ))} */
-}

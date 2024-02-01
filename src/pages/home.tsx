@@ -98,7 +98,7 @@ export const HomeScreen = () => {
                 alignItems: "center",
               }}
             >
-              <img
+              <img alt="dp image"
                 src={Dp}
                 className="homeImg"
                 style={{

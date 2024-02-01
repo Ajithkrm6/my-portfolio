@@ -179,7 +179,7 @@ export const ContactScreen = () => {
             justifyContent="center"
             alignItems="center"
           >
-            <img src={cartoon} style={{ width: "100%" }} />
+            <img src={cartoon} alt="contact img" style={{ width: "100%" }} />
           </Grid>
           <Grid item md={6}>
             <Grid
@@ -326,6 +326,7 @@ export const ContactScreen = () => {
                 <Grid container justifyContent="center" flexWrap="wrap">
                   <Link href="https://www.instagram.com/ajithkrm6/">
                     <img
+                      alt="insta img"
                       src={instagram}
                       style={{ height: "30px", width: "30px" }}
                     />
@@ -333,6 +334,7 @@ export const ContactScreen = () => {
 
                   <Link href="https://gitlab.com/Ajithkrm6">
                     <img
+                      alt="gitlab img"
                       src={gitLab}
                       style={{ height: "40px", width: "80px" }}
                     />
@@ -341,6 +343,7 @@ export const ContactScreen = () => {
                   <Link href="https://github.com/Ajithkrm6">
                     <img
                       src={gitHub}
+                      alt="github img"
                       style={{ height: "40px", width: "40px" }}
                     />
                   </Link>
@@ -350,6 +353,7 @@ export const ContactScreen = () => {
                   >
                     <img
                       src={linkedIN}
+                      alt="linkedIn img"
                       style={{
                         height: "30px",
                         width: "30px",

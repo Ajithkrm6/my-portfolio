@@ -36,6 +36,7 @@ export const SkillCard = (props: SkillCardProps) => {
       >
         <img
           src={props.techImg}
+          alt="technology image"
           style={{
             width: "70px",
             justifyContent: "center",

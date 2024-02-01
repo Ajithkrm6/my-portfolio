@@ -11,7 +11,7 @@ import { styled } from "@mui/system";
 import { ProjectCard } from "../components/Projectscard";
 import giftCards from "../assets/images/Premiumgiftcard.png";
 import experienceHub from "../assets/images/experiancehub.png";
-import zkpoker from "../assets/images/Zkpoker 1zkpoker.jpg";
+import zkpoker from "../assets/images/z1Zk.jpg";
 
 export interface Project {
   id: number;
@@ -44,6 +44,7 @@ export const ProjectScreen = () => {
     height: "100vh",
     width: "100%",
     overflowY: "auto",
+    // padding: "5%",
   });
 
   const projectData: Project[] = [
@@ -76,7 +77,7 @@ export const ProjectScreen = () => {
       title: "ExperienceHub-Ai",
       img: experienceHub,
       description:
-        "Different ai modles are grouped at single platform where...",
+        "A platform for direct interaction with selected AI models.        ",
       role: "ExperienceHub.AI stands as a testament to my role as a Front-End Developer, where I played a pivotal part in the development of its versatile platform. This innovative project offers a diverse array of models crafted to enhance various user experiences. Leveraging my expertise in front-end technologies such as HTML, CSS, JavaScript, React.js, and Redux, I contributed to shaping the user interface of ExperienceHub.AI. As a Front-End Developer, my responsibilities included translating design concepts into interactive and visually appealing interfaces. I collaborated closely with the team to ensure seamless integration of different models with distinct topologies, providing flexibility and efficiency for a myriad of use cases. This experience not only enriched my skills in UI development but also reinforced my commitment to delivering high-quality, user-centric solutions.",
       technologiesUsed:
         "Html, CSS, React.Js, Next.Js, ReactNative,Storybook(to test the components in isolation).",
@@ -92,10 +93,23 @@ export const ProjectScreen = () => {
         flexDirection="column"
         justifyContent="center"
         alignContent="center"
+        paddingBottom="15px"
       >
-        <Typography color="#ffffff" variant="h4">
-          Projects
-        </Typography>
+        <Grid padding="3%">
+          <Typography
+            sx={{
+              fontSize: "30px",
+              background: "linear-gradient(45deg,#1D5B79, #84D2C5)",
+              WebkitBackgroundClip: "text",
+              color: "#FFD95A",
+              fontWeight: "bold",
+              paddingTop: "15px",
+            }}
+          >
+            Projects
+          </Typography>
+          <Divider color="#7b8794" />
+        </Grid>
         <Grid
           paddingTop="30px"
           container
@@ -155,10 +169,10 @@ export const ProjectScreen = () => {
                 <Typography
                   fontSize={25}
                   sx={{
-                    background:
-                      "linear-gradient(45deg,#84D2C5,#EEE7DA,#84D2C5)",
+                    // background:
+                    //   "linear-gradient(180deg,#84D2C5,#EEE7DA,#84D2C5)",
                     WebkitBackgroundClip: "text",
-                    color: "transparent",
+                    color: "#F0A500",
                   }}
                 >
                   {(project as Project).title}
@@ -166,6 +180,7 @@ export const ProjectScreen = () => {
                 <Button
                   sx={{
                     background: "linear-gradient(45deg,#1D5B79, #468B97)",
+                    borderRadius: "8px",
                   }}
                   variant="contained"
                   onClick={() => handleClose()}
@@ -176,28 +191,40 @@ export const ProjectScreen = () => {
               <Divider color="#ffffff" style={{ width: "100%" }} />
               <Grid item paddingTop={1}>
                 <Grid container>
-                  <Grid item md={6} display="flex" justifyContent="center">
+                  <Grid
+                    item
+                    md={6}
+                    sm={6}
+                    display="flex"
+                    flexDirection="column"
+                    justifyContent="flex-start"
+                    alignItems="center"
+                    alignSelf="flex-start"
+                  >
                     <img
                       src={(project as Project).img}
-                      style={{ height: "60%", width: "75%" }}
+                      style={{ width: "75%" }}
                     />
                   </Grid>
                   <Grid
                     item
                     md={6}
+                    sm={6}
                     spacing={2}
                     display="flex"
                     justifyContent="center"
                     flexDirection="column"
+                    padding={0}
+                    overflow="auto"
                   >
                     <Typography
                       fontFamily="cursive"
                       color="#ffffff"
-                      fontWeight={600}
+                      fontWeight={900}
                       fontSize={20}
                       sx={{
                         background:
-                          "linear-gradient(45deg,#84D2C5,#EEE7DA,#84D2C5)",
+                          "linear-gradient(180deg,#84D2C5,#EEE7DA,#84D2C5)",
                         WebkitBackgroundClip: "text",
                         color: "transparent",
                       }}
@@ -221,11 +248,11 @@ export const ProjectScreen = () => {
                     <Typography
                       fontFamily="cursive"
                       fontSize={20}
-                      fontWeight={600}
+                      fontWeight={900}
                       // color="#ffffff"
                       sx={{
                         background:
-                          "linear-gradient(45deg,#84D2C5,#EEE7DA,#84D2C5)",
+                          "linear-gradient(180deg,#84D2C5,#EEE7DA,#84D2C5)",
                         WebkitBackgroundClip: "text",
                         color: "transparent",
                       }}
@@ -259,12 +286,12 @@ export const ProjectScreen = () => {
                     <Typography
                       // className="proInfoText"
                       fontFamily="cursive"
-                      fontWeight={600}
+                      fontWeight={900}
                       fontSize={20}
                       // color="#ffffff"
                       sx={{
                         background:
-                          "linear-gradient(45deg,#84D2C5,#EEE7DA,#84D2C5)",
+                          "linear-gradient(180deg,#84D2C5,#EEE7DA,#84D2C5)",
                         WebkitBackgroundClip: "text",
                         color: "transparent",
                       }}

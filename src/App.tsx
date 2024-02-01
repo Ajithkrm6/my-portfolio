@@ -11,11 +11,13 @@ import { MainScreen } from "./pages/main";
 import { SkillScreen } from "./pages/skills";
 import { ProjectScreen } from "./pages/projects";
 import { ContactScreen } from "./pages/contactMe";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   useEffect(() => {
     // Initialize AOS
     AOS.init({
+      easing: "ease-in-out",
       duration: 1000, // You can customize the animation duration
     });
   });
@@ -27,6 +29,7 @@ function App() {
         <Route path="/#projects" element={<ProjectScreen />} />
         <Route path="/#contact" element={<ContactScreen />} />
       </Routes>
+      <Toaster position="top-right" />
     </Router>
   );
 }

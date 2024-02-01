@@ -2,11 +2,14 @@ import React, { useEffect, useState } from "react";
 import { Header } from "../components/Header";
 import { Button, Grid, Typography, Card } from "@mui/material";
 import { TypeWritter } from "../components/TypeWritter";
-import Dp from "../assets/images/groudDp.png";
+import Dp from "../assets/images/Dp-main 1test 1main_dp.png";
 import { motion, useAnimation } from "framer-motion";
 import { styled } from "@mui/system";
 import { DownloadButton } from "../components/DownloadButton";
 import HtmlImg from "../assets/images/html.png";
+import { HashLink as Link } from "react-router-hash-link";
+import toast from "react-hot-toast";
+import { TypeAnimation } from "react-type-animation";
 
 export const HomeScreen = () => {
   const [offSetY, setOffSetY] = useState(0);
@@ -23,27 +26,27 @@ export const HomeScreen = () => {
     });
   }, [controls]);
 
-  const HeroContainer = styled("div")({
-    position: "relative",
-    display: "flex",
-    flexDirection: "column",
-    height: "100vh",
-    width: "100%",
-  });
+  // const HeroContainer = styled("div")({
+  //   position: "relative",
+  //   display: "flex",
+  //   flexDirection: "column",
+  //   height: "100vh",
+  //   width: "100%",
+  // });
 
-  const Video = styled("video")({
-    position: "absolute",
-    top: 0,
-    left: 0,
-    width: "100%",
-    height: "auto",
-    objectFit: "cover",
-  });
+  // const Video = styled("video")({
+  //   position: "absolute",
+  //   top: 0,
+  //   left: 0,
+  //   width: "100%",
+  //   height: "auto",
+  //   objectFit: "cover",
+  // });
 
   const Section = styled("section")({
     height: "100vh",
     width: "100%",
-
+    overflowY: "auto",
     alignItems: "center",
     justifyContent: "center",
   });
@@ -63,8 +66,12 @@ export const HomeScreen = () => {
     return window.removeEventListener("scroll", handleOffSet);
   }, [offSetY]);
 
+  const handletriger = () => {
+    toast.success("success", { duration: 3000 });
+  };
+
   return (
-    <Section id="home" data-aos="zoom-in">
+    <Section id="home">
       <Grid
         height="100vh"
         display="flex"
@@ -79,7 +86,7 @@ export const HomeScreen = () => {
           justifyContent="center"
           alignItems="center"
         >
-          <Grid item md={6} sm={12}>
+          <Grid item md={5} sm={12} height="100%">
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -91,30 +98,19 @@ export const HomeScreen = () => {
                 alignItems: "center",
               }}
             >
-              <Card
-                sx={{
-                  height: "30%",
-                  width: "60%",
-                  background: "rgba(255, 255, 255, 0.2)",
-                  backdropFilter: "blur(5px)",
-                  webkitBackdropFilter: "blur(5px)",
-                  boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
-                  border: "1px solid rgba(255, 255, 255, 0.3)",
-                  borderRadius: "15px",
+              <img
+                src={Dp}
+                className="homeImg"
+                style={{
+                  height: "90%",
+                  width: "85%",
+                  justifyContent: "center",
+                  alignItems: "center",
                 }}
-              >
-                <img
-                  src={Dp}
-                  style={{
-                    width: "100%",
-                    justifyContent: "center",
-                    alignItems: "center",
-                  }}
-                />
-              </Card>
+              />
             </motion.div>
           </Grid>
-          <Grid item md={6} sm={12}>
+          <Grid item md={7} sm={12}>
             <Grid
               item
               md={12}
@@ -124,11 +120,10 @@ export const HomeScreen = () => {
               textAlign="center"
             >
               <TypeWritter
-                // fontSize={30}
-                // color="#ffffff"
                 sx={{
                   fontSize: "30px",
-                  background: "linear-gradient(45deg,#1D5B79, #84D2C5)",
+                  // background: "linear-gradient(45deg,#1D5B79, #84D2C5)",
+                  backgroundColor: "#F0A500",
                   WebkitBackgroundClip: "text",
                   color: "transparent",
                   fontWeight: "bold",
@@ -144,7 +139,7 @@ export const HomeScreen = () => {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1, delay: 0.8 }}
               >
-                <TypeWritter
+                {/* <TypeWritter
                   // fontSize={20}
                   // color="#ffffff"
                   sx={{
@@ -156,6 +151,27 @@ export const HomeScreen = () => {
                   }}
                   speed={60}
                   text="Front End Developer"
+                /> */}
+                <TypeAnimation
+                  style={{
+                    fontSize: "20px",
+                    // background: "linear-gradient(45deg,#1D5B79, #84D2C5)",
+                    background: "linear-gradient(180deg,#1D5B79, #84D2C5)",
+                    // backgroundColor: "#FFD95A",
+                    WebkitBackgroundClip: "text",
+                    color: "transparent",
+                    fontWeight: "bold",
+                  }}
+                  sequence={[
+                    "Front End Developer",
+                    1000,
+                    "FreeLancer",
+                    1000,
+                    "",
+                  ]}
+                  wrapper="span"
+                  speed={50}
+                  repeat={Infinity}
                 />
               </motion.div>
             </Grid>
@@ -187,16 +203,36 @@ export const HomeScreen = () => {
                   animate={{ opacity: 1 }}
                   transition={{ duration: 2.5, delay: 2.8 }}
                 >
-                  <Button
+                  <Link to="#contact">
+                    <Button
+                      // onClick={() => handletriger()}
+
+                      sx={{
+                        marginRight: "20px",
+                        backgroundColor: "#F0A500",
+                        borderRadius: "8px",
+
+                        "&:hover": {
+                          backgroundColor: "#F0A500", // Set to 'inherit' or any other desired value
+                        },
+                      }}
+                      variant="contained"
+                    >
+                      <Typography color="#000000" fontWeight="600">
+                        Contact Me
+                      </Typography>
+                    </Button>
+                  </Link>
+                  <DownloadButton
                     sx={{
-                      marginRight: "20px",
-                      background: "linear-gradient(45deg,#1D5B79, #468B97)",
+                      background: "linear-gradient(180deg,#1D5B79, #468B97)",
+                      borderRadius: "8px",
                     }}
-                    variant="contained"
+                    textSx={{ color: "#000000", fontWeight: "600" }}
+                    path={resumePath}
                   >
-                    contact me
-                  </Button>
-                  <DownloadButton path={resumePath}>Download CV</DownloadButton>
+                    Resume
+                  </DownloadButton>
                 </motion.div>
               </Grid>
             </motion.div>

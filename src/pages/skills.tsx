@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, Typography } from "@mui/material";
+import { Divider, Grid, Typography } from "@mui/material";
 import { styled } from "@mui/system";
 import { SkillCard } from "../components/Card";
 
@@ -21,6 +21,8 @@ export const SkillScreen = () => {
     height: "100vh",
     width: "100%",
     overflowY: "auto",
+    // paddingTop: "5%",
+    // paddingLeft: "5%",
     // display: "flex",
     // flexDirection: "column",
     // justifyContent: "center",
@@ -29,10 +31,21 @@ export const SkillScreen = () => {
 
   return (
     <Section id="skills" data-aos="zoom-in">
-      <Grid>
-        <Typography textAlign="start" variant="h4" color="#ffffff">
+      <Grid padding="3%">
+        <Typography
+          textAlign="start"
+          sx={{
+            fontSize: "30px",
+            background: "linear-gradient(45deg,#1D5B79, #84D2C5)",
+            WebkitBackgroundClip: "text",
+            color: "#FFD95A",
+            fontWeight: "bold",
+            paddingTop: "15px",
+          }}
+        >
           Skills
         </Typography>
+        <Divider color="#ffffff" />
       </Grid>
       <Grid
         container
@@ -53,7 +66,7 @@ export const SkillScreen = () => {
           spacing={1} // Adjust the gap between the cards
         >
           {techSkillsData.map((skill, index) => (
-            <Grid item key={index} xs={12} md={3} sm={3}>
+            <Grid item key={index} xs={6} md={3} sm={2}>
               <SkillCard techImg={skill.img} lable={skill.lable} />
             </Grid>
           ))}

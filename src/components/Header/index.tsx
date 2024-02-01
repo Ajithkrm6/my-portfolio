@@ -104,6 +104,8 @@ export const Header: FC<HeaderProps> = ({ children, customPosition, sx }) => {
                     <Tab
                       value="home"
                       label="Home"
+                      color="#ffffff"
+                      disableRipple
                       style={{
                         color: value === "home" ? "#feda6a" : "#ffffff",
                       }}
@@ -119,6 +121,7 @@ export const Header: FC<HeaderProps> = ({ children, customPosition, sx }) => {
                     <Tab
                       value="skills"
                       label="Skills"
+                      disableRipple
                       style={{
                         color: value === "skills" ? "#feda6a" : "#ffffff",
                       }}
@@ -135,6 +138,7 @@ export const Header: FC<HeaderProps> = ({ children, customPosition, sx }) => {
                     <Tab
                       value="projects"
                       label="Projects"
+                      disableRipple
                       style={{
                         color: value === "projects" ? "#feda6a" : "#ffffff",
                       }}
@@ -150,6 +154,8 @@ export const Header: FC<HeaderProps> = ({ children, customPosition, sx }) => {
                     <Tab
                       value="contact"
                       label="Contact"
+                      color="#ffffff"
+                      disableRipple
                       style={{
                         color: value === "contact" ? "#feda6a" : "#ffffff",
                       }}
@@ -161,7 +167,7 @@ export const Header: FC<HeaderProps> = ({ children, customPosition, sx }) => {
                       }
                     />
                   </Link>
-
+                  {/* 
                   <Tab
                     value="cv"
                     label="Download Cv"
@@ -174,7 +180,7 @@ export const Header: FC<HeaderProps> = ({ children, customPosition, sx }) => {
                         return "cv";
                       })
                     }
-                  />
+                  /> */}
                 </Tabs>
               </Grid>
             </Grid>
@@ -239,6 +245,7 @@ export const Header: FC<HeaderProps> = ({ children, customPosition, sx }) => {
               >
                 <Link to="#home">
                   <Tab
+                    disableRipple
                     value="home"
                     label="Home"
                     style={{
@@ -254,6 +261,7 @@ export const Header: FC<HeaderProps> = ({ children, customPosition, sx }) => {
                 </Link>
                 <Link to="#skills">
                   <Tab
+                    disableRipple
                     value="skills"
                     label="skills"
                     style={{
@@ -269,6 +277,7 @@ export const Header: FC<HeaderProps> = ({ children, customPosition, sx }) => {
                 </Link>
                 <Link to="#projects">
                   <Tab
+                    disableRipple
                     value="projects"
                     label="Projects"
                     style={{
@@ -284,6 +293,7 @@ export const Header: FC<HeaderProps> = ({ children, customPosition, sx }) => {
                 </Link>
                 <Link to="#contact">
                   <Tab
+                    disableRipple
                     value="contact"
                     label="Contact"
                     style={{
@@ -298,7 +308,7 @@ export const Header: FC<HeaderProps> = ({ children, customPosition, sx }) => {
                   />
                 </Link>
 
-                <Tab
+                {/* <Tab
                   value="cv"
                   label="Download Cv"
                   style={{
@@ -310,7 +320,7 @@ export const Header: FC<HeaderProps> = ({ children, customPosition, sx }) => {
                       return "cv";
                     })
                   }
-                />
+                /> */}
               </Tabs>
             </Drawer>
           </Hidden>

@@ -19,7 +19,7 @@ export const ProjectCard = (props: ProjectCardProps) => {
     <Grid container md={props.md} sm={props.sm} justifyContent="center">
       <Card
         sx={{
-          width: "200px",
+          width: "225px",
           borderRadius: "20px",
           display: "flex",
           flexDirection: "column",
@@ -98,6 +98,7 @@ export const ProjectCard = (props: ProjectCardProps) => {
             marginRight: "20px",
             background: "linear-gradient(45deg,#1D5B79, #468B97)",
             marginTop: "10px",
+            borderRadius: "8px",
           }}
           variant="contained"
           onClick={() => props.onClick()}

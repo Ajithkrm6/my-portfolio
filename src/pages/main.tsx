@@ -10,7 +10,7 @@ import { ContactScreen } from "./contactMe";
 export const MainScreen = () => {
   return (
     <Grid className="mainContainer">
-      <Header>Ajith Kumar.</Header>
+      <Header sx={{ color: "#F0A500" }}>Ajith Kumar</Header>
       <HomeScreen />
       <SkillScreen />
       <ProjectScreen />

@@ -1,9 +1,12 @@
 import React, { ReactNode } from "react";
-import { Button } from "@mui/material";
+import { Button, SxProps, Typography } from "@mui/material";
+import FileDownloadOutlinedIcon from "@mui/icons-material/FileDownloadOutlined";
 
 export interface DownloadButtonProps {
   path: string;
   children: ReactNode;
+  sx?: SxProps;
+  textSx?: SxProps;
 }
 
 export const DownloadButton = (props: DownloadButtonProps) => {
@@ -17,13 +20,12 @@ export const DownloadButton = (props: DownloadButtonProps) => {
 
   return (
     <Button
-      sx={{
-        background: "linear-gradient(45deg,#1D5B79, #468B97)",
-      }}
+      sx={{ ...props.sx }}
       variant="contained"
       onClick={() => handleDownload()}
     >
-      {props.children}
+      <Typography sx={{ ...props.textSx }}> {props.children}</Typography>
+      <FileDownloadOutlinedIcon sx={{ color: "#000000", paddingLeft: "3px" }} />
     </Button>
   );
 };

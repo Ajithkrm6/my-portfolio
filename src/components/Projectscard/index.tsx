@@ -20,6 +20,7 @@ export const ProjectCard = (props: ProjectCardProps) => {
       <Card
         sx={{
           width: "225px",
+          height: "320px",
           borderRadius: "20px",
           display: "flex",
           flexDirection: "column",
@@ -56,6 +57,8 @@ export const ProjectCard = (props: ProjectCardProps) => {
                 background: "linear-gradient(45deg,#84D2C5,#EEE7DA,#84D2C5)",
                 WebkitBackgroundClip: "text",
                 color: "transparent",
+                fontWeight: "800",
+                fontFamily: "PromptBold",
               }}
             >
               {props.lable}
@@ -87,10 +90,15 @@ export const ProjectCard = (props: ProjectCardProps) => {
               background: "linear-gradient(45deg,#84D2C5,#EEE7DA,#84D2C5)",
               WebkitBackgroundClip: "text",
               color: "transparent",
+              fontWeight: "700",
+              fontFamily: "PromptBold",
             }}
             textAlign="start"
           >
-            Description: {props.description}
+            Description:{" "}
+            <Typography fontFamily="PromptSemiBold">
+              {props.description}
+            </Typography>
           </Typography>
         </Grid>
         <Button

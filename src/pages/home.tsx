@@ -45,116 +45,102 @@ export const HomeScreen = () => {
 
   const Section = styled("section")({
     height: "100vh",
+
     width: "100%",
     overflowY: "auto",
+    display: "flex",
+    flexDirection: "column",
     alignItems: "center",
     justifyContent: "center",
   });
 
-  const Html = styled("html")({
-    scrollSnapType: "y",
-    scrollBehavior: "smooth",
-  });
+  // const Html = styled("html")({
+  //   scrollSnapType: "y",
+  //   scrollBehavior: "smooth",
+  // });
 
   useEffect(() => {
     const resumePath = require("../assets/AjithKumar.pdf");
   }, []);
 
-  useEffect(() => {
-    window.addEventListener("scroll", handleOffSet);
-
-    return window.removeEventListener("scroll", handleOffSet);
-  }, [offSetY]);
-
-  const handletriger = () => {
-    toast.success("success", { duration: 3000 });
-  };
-
   return (
     <Section id="home">
-      <Grid
-        height="100vh"
-        display="flex"
-        justifyContent="center"
-        alignItems="center"
-        spacing={2}
-      >
+      <Grid container display="flex">
         <Grid
-          container
-          display="flex"
-          flexDirection="row"
-          justifyContent="center"
-          alignItems="center"
+          item
+          md={5}
+          sm={12}
+          paddingTop={3}
+          // display="flex"
+          // flexDirection="column"
+          // justifyContent="center"
+          // alignItems="center"
         >
-          <Grid item md={5} sm={12} height="100%">
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 1.5, delay: 0.5 }}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1.5, delay: 0.5 }}
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <img
+              alt="dp image"
+              src={Dp}
+              className="homeImg"
               style={{
-                display: "flex",
-                flexDirection: "row",
+                height: "90%",
+                width: "80%",
                 justifyContent: "center",
                 alignItems: "center",
               }}
-            >
-              <img alt="dp image"
-                src={Dp}
-                className="homeImg"
-                style={{
-                  height: "90%",
-                  width: "85%",
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
-              />
-            </motion.div>
-          </Grid>
-          <Grid item md={7} sm={12}>
-            <Grid
-              item
-              md={12}
-              sm={12}
-              alignItems="center"
-              justifyContent="center"
-              textAlign="center"
-            >
+            />
+          </motion.div>
+        </Grid>
+        <Grid
+          item
+          md={7}
+          sm={12}
+          display="flex"
+          flexDirection="column"
+          justifyContent="center"
+          padding={1}
+        >
+          <Grid
+            container
+            display="flex"
+            flexDirection="column"
+            justifyContent="center"
+            alignItems="center"
+          >
+            <Grid item justifyContent="center">
               <TypeWritter
                 sx={{
-                  fontSize: "30px",
-                  // background: "linear-gradient(45deg,#1D5B79, #84D2C5)",
+                  fontSize: "28px",
+                  fontFamily: "PromptBold",
                   backgroundColor: "#F0A500",
                   WebkitBackgroundClip: "text",
                   color: "transparent",
-                  fontWeight: "bold",
+                  fontWeight: "900",
                   paddingTop: "15px",
                 }}
                 speed={50}
                 text="Ajith kumar"
               />
             </Grid>
-            <Grid item md={12} sm={12} textAlign="center">
+            <Grid item>
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1, delay: 0.8 }}
               >
-                {/* <TypeWritter
-                  // fontSize={20}
-                  // color="#ffffff"
-                  sx={{
-                    fontSize: "20px",
-                    background: "linear-gradient(45deg,#1D5B79, #84D2C5)",
-                    WebkitBackgroundClip: "text",
-                    color: "transparent",
-                    fontWeight: "bold",
-                  }}
-                  speed={60}
-                  text="Front End Developer"
-                /> */}
                 <TypeAnimation
                   style={{
                     fontSize: "20px",
+                    fontFamily: "PromptBold",
                     // background: "linear-gradient(45deg,#1D5B79, #84D2C5)",
                     background: "linear-gradient(180deg,#1D5B79, #84D2C5)",
                     // backgroundColor: "#FFD95A",
@@ -175,206 +161,73 @@ export const HomeScreen = () => {
                 />
               </motion.div>
             </Grid>
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 1.5, delay: 2 }}
-            >
-              <Typography textAlign="center" color="#ffffff" padding={2}>
-                Hello! I'm Ajith Kumar, a passionate Front End Developer with
-                1.7 years of hands-on experience in crafting engaging and
-                responsive web applications. My expertise spans a range of
-                front-end technologies, including HTML, CSS, JavaScript,
-                React.js, Redux, Next.js, TypeScript, React Native, and SQL. I
-                had the privilege of contributing my skills to Flying Fox Labs
-                as a Software Developer. Explore the projects in my portfolio to
-                witness firsthand the innovative solutions I've brought to life.
-                Let's build exceptional digital experiences together!
-              </Typography>
-              <Grid
-                item
-                display="flex"
-                justifyContent="center"
-                alignItems="center"
-                paddingTop={2}
+
+            <Grid item>
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1.5, delay: 2 }}
               >
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 2.5, delay: 2.8 }}
+                <Typography
+                  textAlign="center"
+                  fontFamily="PromptSemiBold"
+                  color="#ffffff"
+                  fontSize="15px"
+                  padding={2}
                 >
-                  <Link to="#contact">
-                    <Button
-                      // onClick={() => handletriger()}
+                  Hello! I'm Ajith Kumar, a skilled Front End Developer with 1.7
+                  years of experience crafting engaging and responsive web
+                  applications. My expertise includes HTML, CSS, JavaScript,
+                  React.js, Redux, Next.js, TypeScript, React Native, and SQL.
+                  I've contributed to projects at Flying Fox Labs as a Software
+                  Developer. Explore my portfolio for innovative solutions, and
+                  let's create exceptional digital experiences together!
+                </Typography>
+              </motion.div>
+            </Grid>
 
-                      sx={{
-                        marginRight: "20px",
-                        backgroundColor: "#F0A500",
-                        borderRadius: "8px",
+            <Grid item>
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 2.5, delay: 2.8 }}
+              >
+                <Link to="#contact">
+                  <Button
+                    // onClick={() => handletriger()}
 
-                        "&:hover": {
-                          backgroundColor: "#F0A500", // Set to 'inherit' or any other desired value
-                        },
-                      }}
-                      variant="contained"
-                    >
-                      <Typography color="#000000" fontWeight="600">
-                        Contact Me
-                      </Typography>
-                    </Button>
-                  </Link>
-                  <DownloadButton
                     sx={{
-                      background: "linear-gradient(180deg,#1D5B79, #468B97)",
+                      marginRight: "20px",
+                      backgroundColor: "#F0A500",
                       borderRadius: "8px",
+
+                      "&:hover": {
+                        backgroundColor: "#F0A500", // Set to 'inherit' or any other desired value
+                      },
                     }}
-                    textSx={{ color: "#000000", fontWeight: "600" }}
-                    path={resumePath}
+                    variant="contained"
                   >
-                    Resume
-                  </DownloadButton>
-                </motion.div>
-              </Grid>
-            </motion.div>
+                    <Typography color="#000000" fontWeight="600">
+                      Contact Me
+                    </Typography>
+                  </Button>
+                </Link>
+
+                <DownloadButton
+                  sx={{
+                    background: "linear-gradient(180deg,#1D5B79, #468B97)",
+                    borderRadius: "8px",
+                  }}
+                  textSx={{ color: "#000000", fontWeight: "600" }}
+                  path={resumePath}
+                >
+                  Resume
+                </DownloadButton>
+              </motion.div>
+            </Grid>
           </Grid>
         </Grid>
       </Grid>
     </Section>
   );
 };
-
-//  <Section>
-// <Grid
-//   display="flex"
-//   flexDirection="column"
-//   alignItems="center"
-//   justifyContent="center"
-//   className="homeContainer"
-//   style={{ transform: `translateY(${offSetY * 0.5}px)` }}
-// >
-//   {/* <Grid
-//     container
-//     display="flex"
-//     alignItems="center"
-//     justifyContent="center"
-//   > */}
-//   <Grid
-//     bgcolor="red"
-//     item
-//     display="flex"
-//     justifyContent="center"
-//     alignItems="center"
-//     flexDirection="row"
-//     md={6}
-//     padding={2}
-//   >
-//     <motion.div
-//       initial={{ opacity: 0 }}
-//       animate={{ opacity: 1 }}
-//       transition={{ duration: 1.5, delay: 0.5 }}
-//     >
-
-//       <Card
-//         sx={{
-//           height: "25%",
-//           width: "50%",
-//           background: "rgba(255, 255, 255, 0.2)",
-//           backdropFilter: "blur(5px)",
-//           webkitBackdropFilter: "blur(5px)",
-//           boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
-//           border: "1px solid rgba(255, 255, 255, 0.3)",
-//           borderRadius: "15px",
-//         }}
-//       >
-//         <img
-//           src={Dp}
-//           style={{
-//             width: "100%",
-//             justifyContent: "center",
-//             alignItems: "center",
-//           }}
-//         />
-//       </Card>
-//     </motion.div>
-//   </Grid>
-//   <Grid
-//     bgcolor="yellow"
-//     item
-//     md={6}
-//     display="flex"
-//     alignItems="center"
-//     justifyContent="center"
-//     pt={3}
-//   >
-//     <Grid container display="flex" flexDirection="column">
-//       <Grid
-//         item
-//         md={12}
-//         sm={12}
-//         alignItems="center"
-//         justifyContent="center"
-//         textAlign="center"
-//       >
-//         <TypeWritter
-//           fontSize={30}
-//           color="#ffffff"
-//           speed={60}
-//           text="Ajith kumar"
-//         />
-//       </Grid>
-//       <Grid item md={12} sm={12} textAlign="center">
-//         <motion.div
-//           initial={{ opacity: 0 }}
-//           animate={{ opacity: 1 }}
-//           transition={{ duration: 0.8, delay: 1 }}
-//         >
-//           <TypeWritter
-//             fontSize={20}
-//             color="#ffffff"
-//             speed={60}
-//             text="Front End Developer"
-//           />
-//         </motion.div>
-//       </Grid>
-//       <Grid item md={12} sm={12} p={2}>
-//         <motion.div
-//           initial={{ opacity: 0 }}
-//           animate={{ opacity: 1 }}
-//           transition={{ duration: 1, delay: 2 }}
-//         >
-//           <Typography textAlign="center" color="#ffffff">
-//             As a front-end developer, the primary focus is on crafting
-//             engaging and user-friendly experiences on the web. This
-//             involves translating design mockups into responsive and
-//             interactive interfaces using a combination of HTML, CSS, and
-//             JavaScript. Attention to detail is paramount, ensuring that
-//             the visual elements align with the overall design aesthetic
-//             and brand identity. Front-end developers often collaborate
-//             closely with UX/UI designers to bring their creative visions
-//             to life. Keeping up with the latest web technologies and
-//             trends is crucial, as it empowers developers to build modern
-//             and efficient web applications that deliver a seamless user
-//             experience across various devices and browsers.
-//           </Typography>
-//         </motion.div>
-//       </Grid>
-//       <Grid
-//         item
-//         display="flex"
-//         justifyContent="center"
-//         alignItems="center"
-//       >
-//         <motion.div
-//           initial={{ opacity: 0 }}
-//           animate={{ opacity: 1 }}
-//           transition={{ duration: 1.5, delay: 2.5 }}
-//         >
-//           <Button>contact me</Button>
-//           <DownloadButton path={resumePath}>Download CV</DownloadButton>
-//         </motion.div>
-//       </Grid>
-//     </Grid>
-//   </Grid>
-// </Grid>
-// </Grid>
-// </Section>

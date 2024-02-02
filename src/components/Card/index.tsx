@@ -20,12 +20,11 @@ export const SkillCard = (props: SkillCardProps) => {
           alignItems: "center",
           justifyContent: "center",
           margin: "10px",
-          // flex: "0.8",
-          height: "20%",
-          width: "45%",
+
+          height: "100px",
+          width: "200px",
           padding: "3%",
-          // backgroundColor: "#E1E8EB",
-          // background: "linear-gradient(45deg,#F0A500, #FFD369)",
+
           background: "rgba(255, 255, 255, 0.2)",
           backdropFilter: "blur(5px)",
           webkitBackdropFilter: "blur(5px)",
@@ -49,6 +48,7 @@ export const SkillCard = (props: SkillCardProps) => {
             background: "linear-gradient(180deg,#1D5B79, #468B97)",
             WebkitBackgroundClip: "text",
             color: "#ffffff",
+            fontFamily: "PromptSemiBold",
             fontWeight: "bold",
           }}
           paddingTop={2}

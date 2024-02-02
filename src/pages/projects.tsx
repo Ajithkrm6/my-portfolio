@@ -12,6 +12,7 @@ import { ProjectCard } from "../components/Projectscard";
 import giftCards from "../assets/images/Premiumgiftcard.png";
 import experienceHub from "../assets/images/experiancehub.png";
 import zkpoker from "../assets/images/z1Zk.jpg";
+import CloseIcon from "@mui/icons-material/Close";
 
 export interface Project {
   id: number;
@@ -99,6 +100,7 @@ export const ProjectScreen = () => {
               color: "#FFD95A",
               fontWeight: "bold",
               paddingTop: "15px",
+              fontFamily: "PromptSemiBold",
             }}
           >
             Projects
@@ -168,6 +170,8 @@ export const ProjectScreen = () => {
                     //   "linear-gradient(180deg,#84D2C5,#EEE7DA,#84D2C5)",
                     WebkitBackgroundClip: "text",
                     color: "#F0A500",
+                    fontWeight: "700",
+                    fontFamily: "PromptBold",
                   }}
                 >
                   {(project as Project).title}
@@ -175,12 +179,13 @@ export const ProjectScreen = () => {
                 <Button
                   sx={{
                     background: "linear-gradient(45deg,#1D5B79, #468B97)",
+
                     borderRadius: "8px",
                   }}
                   variant="contained"
                   onClick={() => handleClose()}
                 >
-                  Close
+                  <CloseIcon />
                 </Button>
               </Grid>
               <Divider color="#ffffff" style={{ width: "100%" }} />
@@ -214,20 +219,21 @@ export const ProjectScreen = () => {
                     overflow="auto"
                   >
                     <Typography
-                      fontFamily="cursive"
+                      fontFamily="PromptBold"
                       color="#ffffff"
-                      fontWeight={900}
+                      // fontWeight={900}
                       fontSize={20}
                       sx={{
                         background:
                           "linear-gradient(180deg,#84D2C5,#EEE7DA,#84D2C5)",
                         WebkitBackgroundClip: "text",
+                        fontFamily: "PromptBold",
                         color: "transparent",
                       }}
                     >
                       Description:
                       <Typography
-                        fontFamily="cursive"
+                        fontFamily="PromptSemiBold"
                         color="#FAF1E4"
                         fontSize={15}
                         fontWeight={900}
@@ -243,12 +249,13 @@ export const ProjectScreen = () => {
                         background:
                           "linear-gradient(180deg,#84D2C5,#EEE7DA,#84D2C5)",
                         WebkitBackgroundClip: "text",
+                        fontFamily: "PromptBold",
                         color: "transparent",
                       }}
                     >
                       Role:
                       <Typography
-                        fontFamily="cursive"
+                        fontFamily="PromptSemiBold"
                         color="#FAF1E4"
                         fontSize={15}
                         fontWeight={700}
@@ -274,12 +281,13 @@ export const ProjectScreen = () => {
                         background:
                           "linear-gradient(180deg,#84D2C5,#EEE7DA,#84D2C5)",
                         WebkitBackgroundClip: "text",
+                        fontFamily: "PromptBold",
                         color: "transparent",
                       }}
                     >
                       Technologies Used:
                       <Typography
-                        fontFamily="cursive"
+                        fontFamily="PromptSemiBold"
                         color="#FAF1E4"
                         fontSize={15}
                         fontWeight={700}

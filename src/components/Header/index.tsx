@@ -208,7 +208,7 @@
 //               color="inherit"
 //               aria-label="menu"
 //               onClick={toggleDrawer(true)}
-//               sx={{ display: { sm: "block", md: "none" } }} // Hide on medium and larger screens
+//               sx={{ display: { sm: "block", md: "none" }, position: "fixed" }} // Hide on medium and larger screens
 //             >
 //               <MenuIcon />
 //             </IconButton>
@@ -484,117 +484,136 @@ export const Header: FC<HeaderProps> = ({ children, customPosition, sx }) => {
       {/* Drawer for small screens (sm) and below */}
       <Hidden mdUp>
         {/* IconButton triggers Drawer */}
-        <IconButton
-          size="large"
-          edge="end"
-          color="inherit"
-          aria-label="menu"
-          onClick={toggleDrawer(true)}
-          sx={{ display: { sm: "block", md: "none" } }}
+        <AppBar
+          sx={{
+            position: "fixed",
+            width: "100%",
+            background: "none",
+            border: "none",
+            boxShadow: "0 4px 30px rgba(0, 0, 0, 0)",
+          }}
         >
-          <MenuIcon sx={{ color: "#ffffff" }} />
-        </IconButton>
+          <Toolbar sx={{ backgroundColor: "none" }}>
+            <IconButton
+              size="large"
+              edge="end"
+              color="inherit"
+              aria-label="menu"
+              onClick={toggleDrawer(true)}
+              sx={{
+                display: { sm: "block", md: "none" },
+                padding: "10px",
+                background: "rgba(255, 255, 255, 0.2)",
+                backdropFilter: "blur(5px)",
+                webkitBackdropFilter: "blur(5px)",
+                // position: "fixed",
+              }}
+            >
+              <MenuIcon sx={{ color: "#ffffff" }} />
+            </IconButton>
+            <Drawer
+              anchor="left"
+              open={isDrawerOpen}
+              onClose={toggleDrawer(false)}
+              onClick={toggleDrawer(false)}
+              sx={{
+                borderRadius: "0 15px 15px 0",
+                width: "100%",
+              }}
+              PaperProps={{
+                sx: {
+                  width: "70%",
+                  borderRadius: "0 15px 15px 0",
+                  background: "rgba(255, 255, 255, 0)",
+                  backdropFilter: "blur(5px)",
+                  webkitBackdropFilter: "blur(5px)",
+                  boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
+                  border: "1px solid rgba(255, 255, 255, 0.3)",
+                },
+              }}
+            >
+              <Tabs
+                orientation="vertical"
+                value={value}
+                onChange={handleChange}
+                component="div"
+                aria-label="secondary tabs example"
+                sx={{
+                  // ...gradientStyle,
+                  width: "100%",
+                  height: "100%",
+                }}
+              >
+                <Link to="#home">
+                  <Tab
+                    disableRipple
+                    value="home"
+                    label="Home"
+                    style={{
+                      color: value === "home" ? "#feda6a" : "#ffffff",
+                    }}
+                    onClick={() =>
+                      setValue((prevValue) => {
+                        console.log(prevValue); // Logs the previous value
+                        return "home";
+                      })
+                    }
+                  />
+                </Link>
+                <Link to="#skills">
+                  <Tab
+                    disableRipple
+                    value="skills"
+                    label="skills"
+                    style={{
+                      color: value === "skills" ? "#feda6a" : "#ffffff",
+                    }}
+                    onClick={() =>
+                      setValue((prevValue) => {
+                        console.log(prevValue); // Logs the previous value
+                        return "skills";
+                      })
+                    }
+                  />
+                </Link>
+                <Link to="#projects">
+                  <Tab
+                    disableRipple
+                    value="projects"
+                    label="Projects"
+                    style={{
+                      color: value === "projects" ? "#feda6a" : "#ffffff",
+                    }}
+                    onClick={() =>
+                      setValue((prevValue) => {
+                        console.log(prevValue); // Logs the previous value
+                        return "projects";
+                      })
+                    }
+                  />
+                </Link>
+                <Link to="#contact">
+                  <Tab
+                    disableRipple
+                    value="contact"
+                    label="Contact"
+                    style={{
+                      color: value === "contact" ? "#feda6a" : "#ffffff",
+                    }}
+                    onClick={() =>
+                      setValue((prevValue) => {
+                        console.log(prevValue); // Logs the previous value
+                        return "contact";
+                      })
+                    }
+                  />
+                </Link>
+              </Tabs>
+            </Drawer>
+          </Toolbar>
+        </AppBar>
 
         {/* Drawer Component */}
-        <Drawer
-          anchor="right"
-          open={isDrawerOpen}
-          onClose={toggleDrawer(false)}
-          onClick={toggleDrawer(false)}
-          sx={{
-            borderRadius: "10px 0 0 10px",
-            width: "100%",
-          }}
-          PaperProps={{
-            sx: {
-              width: "70%",
-              borderRadius: "15px 0 0 15px",
-              background: "rgba(255, 255, 255, 0)",
-              backdropFilter: "blur(5px)",
-              webkitBackdropFilter: "blur(5px)",
-              boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
-              border: "1px solid rgba(255, 255, 255, 0.3)",
-            },
-          }}
-        >
-          <Tabs
-            orientation="vertical"
-            value={value}
-            onChange={handleChange}
-            component="div"
-            aria-label="secondary tabs example"
-            sx={{
-              // ...gradientStyle,
-              width: "100%",
-              height: "100%",
-            }}
-          >
-            <Link to="#home">
-              <Tab
-                disableRipple
-                value="home"
-                label="Home"
-                style={{
-                  color: value === "home" ? "#feda6a" : "#ffffff",
-                }}
-                onClick={() =>
-                  setValue((prevValue) => {
-                    console.log(prevValue); // Logs the previous value
-                    return "home";
-                  })
-                }
-              />
-            </Link>
-            <Link to="#skills">
-              <Tab
-                disableRipple
-                value="skills"
-                label="skills"
-                style={{
-                  color: value === "skills" ? "#feda6a" : "#ffffff",
-                }}
-                onClick={() =>
-                  setValue((prevValue) => {
-                    console.log(prevValue); // Logs the previous value
-                    return "skills";
-                  })
-                }
-              />
-            </Link>
-            <Link to="#projects">
-              <Tab
-                disableRipple
-                value="projects"
-                label="Projects"
-                style={{
-                  color: value === "projects" ? "#feda6a" : "#ffffff",
-                }}
-                onClick={() =>
-                  setValue((prevValue) => {
-                    console.log(prevValue); // Logs the previous value
-                    return "projects";
-                  })
-                }
-              />
-            </Link>
-            <Link to="#contact">
-              <Tab
-                disableRipple
-                value="contact"
-                label="Contact"
-                style={{
-                  color: value === "contact" ? "#feda6a" : "#ffffff",
-                }}
-                onClick={() =>
-                  setValue((prevValue) => {
-                    console.log(prevValue); // Logs the previous value
-                    return "contact";
-                  })
-                }
-              />
-            </Link>
-          </Tabs>
-        </Drawer>
       </Hidden>
     </>
   );

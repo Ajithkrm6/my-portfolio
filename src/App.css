@@ -49,6 +49,86 @@
   }
 }
 
+@font-face {
+  font-family: "Roboto";
+  src: url(../public/fonts/Roboto/Roboto-Regular.ttf) format("truetype");
+  font-style: normal;
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "SingleDay";
+  src: url(../public/fonts/SingleDay/SingleDay-Regular.ttf) format("truetype");
+  font-style: normal;
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "TitiliumWeb";
+  src: url(../public/fonts/TiltiliumWeb/TitilliumWeb-Regular.ttf)
+    format("truetype");
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "ProtestRev";
+  src: url(../public/fonts/ProtestRevolution/ProtestRevolution-Regular.ttf)
+    format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ProtestRiot";
+  src: url(../public/fonts/ProtestRiot/ProtestRiot-Regular.ttf)
+    format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "PlexReg";
+  src: url(../public/fonts/PlexMono/IBMPlexMono-Regular.ttf) format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PlexBold";
+  src: url(../public/fonts/PlexMono/IBMPlexMono-Bold.ttf) format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PromptReg";
+  src: url(../public/fonts/Prompt/Prompt-Regular.ttf) format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PromptSemiBold";
+  src: url(../public/fonts/Prompt/Prompt-SemiBold.ttf) format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PromptBold";
+  src: url(../public/fonts/Prompt/Prompt-Bold.ttf) format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+/* @font-face {
+  font-family: "SixtyFour";
+  src: url(../public/fonts/SixtyFour/Sixtyfour-Regular-VariableFont_BLED\SCAN.ttf)
+    format(truetype);
+  font-style: normal;
+  font-weight: 600;
+} */
+
 .logoImage {
   height: 55px;
   width: 55px;

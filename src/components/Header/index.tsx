@@ -222,6 +222,7 @@ export const Header: FC<HeaderProps> = ({ children, customPosition, sx }) => {
               }}
               PaperProps={{
                 sx: {
+                  width: "70%",
                   borderRadius: "15px 0 0 15px",
                   background: "rgba(255, 255, 255, 0.2)",
                   backdropFilter: "blur(5px)",

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import {
   Button,
   Container,
@@ -36,15 +36,10 @@ export const ProjectScreen = () => {
     setOpen(false);
   };
 
-  // useEffect(() => {
-  //   console.log("Updated project:", project);
-  // }, [project]);
-
   const Section = styled("section")({
     height: "100vh",
     width: "100%",
     overflowY: "auto",
-    // padding: "5%",
   });
 
   const projectData: Project[] = [

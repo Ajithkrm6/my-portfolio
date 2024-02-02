@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import logo from "./logo.svg";
+// import logo from "./logo.svg";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "./App.css";

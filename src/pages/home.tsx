@@ -16,7 +16,7 @@ export const HomeScreen = () => {
   const handleOffSet = () => setOffSetY(window.scrollY);
 
   const backgroundVideo = require("../assets/videos/blackhole.webm");
-  const resumePath = require("../assets/AjithKumar.pdf");
+  const resumePath = require("../assets/AjithKumarGandikota.pdf");
   const controls = useAnimation();
   useEffect(() => {
     controls.start({
@@ -60,7 +60,7 @@ export const HomeScreen = () => {
   // });
 
   useEffect(() => {
-    const resumePath = require("../assets/AjithKumar.pdf");
+    const resumePath = require("../assets/AjithKumarGandikota.pdf");
   }, []);
 
   return (
@@ -128,7 +128,7 @@ export const HomeScreen = () => {
                   paddingTop: "15px",
                 }}
                 speed={50}
-                text="Ajith kumar"
+                text="Ajith Kumar"
               />
             </Grid>
             <Grid item>

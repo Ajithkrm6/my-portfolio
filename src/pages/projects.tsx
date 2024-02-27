@@ -19,8 +19,12 @@ export interface Project {
   img: string;
   title: string;
   description: string;
-  role: string;
-  additionalROleAndResp?: string;
+  role?: string;
+  impli1?: string;
+  role1Des?: string;
+  impli2?: string;
+  role2Des?: string;
+  // additionalROleAndResp?: string;
   detailedDescription: string;
   technologiesUsed: string;
 }
@@ -50,9 +54,12 @@ export const ProjectScreen = () => {
       title: "Gift Cards",
       description:
         "Gift cards are a way to use premimum features in QuickCam app",
-      role: "Gift Cards Implementation: My involvement in the project extended to the meticulous implementation of the Gift Cards feature. This innovative component became the cornerstone of ProManager's QuickCam, offering subscribers enticing rewards at different achievement levels. Through the amalgamation of in-house React.js components and the Tamagui library, I ensured a seamless and feature-rich experience.The Gift Cards concept was carefully curated to provide users with a gamut of options. Leveraging React Native, I crafted diverse gift card choices, fostering a sense of personalization. This extended to the development of a user-friendly interface, simplifying both the purchase and redemption processes.",
-      additionalROleAndResp:
-        "Infinity Bonus and API Development: My role expanded further as I took the lead in developing the Infinity Bonus program. This reward initiative, seamlessly integrated into ProManager, enticed users with monthly gift cards upon subscribing to any plan. To support this, I utilized Nest.js to develop a robust API, ensuring efficient communication between the front-end and back-end components.In summary, my contributions to QuickCam go beyond crafting a visually appealing interface. I strategically led the development of critical components, particularly the Gift Cards feature, infusing innovation and user-centricity into the heart of ProManager's QuickCam.",
+      impli1: "Gift Cards Implementation:",
+      role1Des:
+        "My involvement in the project extended to the meticulous implementation of the Gift Cards feature. This innovative component became the cornerstone of ProManager's QuickCam, offering subscribers enticing rewards at different achievement levels. Through the amalgamation of in-house React.js components and the Tamagui library, I ensured a seamless and feature-rich experience.The Gift Cards concept was carefully curated to provide users with a gamut of options. Leveraging React Native, I crafted diverse gift card choices, fostering a sense of personalization. This extended to the development of a user-friendly interface, simplifying both the purchase and redemption processes.",
+      impli2: "Infinity Bonus and API Development: ",
+      role2Des:
+        "My role expanded further as I took the lead in developing the Infinity Bonus program. This reward initiative, seamlessly integrated into ProManager, enticed users with monthly gift cards upon subscribing to any plan. To support this, I utilized Nest.js to develop a robust API, ensuring efficient communication between the front-end and back-end components.In summary, my contributions to QuickCam go beyond crafting a visually appealing interface. I strategically led the development of critical components, particularly the Gift Cards feature, infusing innovation and user-centricity into the heart of ProManager's QuickCam.",
       technologiesUsed: "Html,CSS, React.Js, Zustand,Next.Js,ReactNative,",
       detailedDescription:
         "ProManager's Quick Cam, a dynamic mobile application, transcends conventional multimedia experiences. Users engage with the app's versatile features, capturing short video clips, expressive bitmojis, and captivating snaps. A standout feature within this creative realm is the Gift Cards functionality, a transformative addition that redefines user engagement and subscription benefits.",
@@ -93,15 +100,19 @@ export const ProjectScreen = () => {
       >
         <Grid padding="3%">
           <Typography
-            sx={{
-              fontSize: "30px",
-              background: "linear-gradient(45deg,#1D5B79, #84D2C5)",
-              WebkitBackgroundClip: "text",
-              color: "#FFD95A",
-              fontWeight: "bold",
-              paddingTop: "15px",
-              fontFamily: "PromptSemiBold",
-            }}
+            // sx={{
+            //   fontSize: "30px",
+            //   background: "linear-gradient(45deg,#1D5B79, #84D2C5)",
+            //   WebkitBackgroundClip: "text",
+            //   color: "#FFD95A",
+            //   fontWeight: "bold",
+            //   paddingTop: "15px",
+            //   fontFamily: "PromptSemiBold",
+            // }}
+            paddingBottom={1}
+            variant="h4"
+            color="#FFD95A"
+            fontFamily="PromptSemiBold"
           >
             Projects
           </Typography>
@@ -241,8 +252,8 @@ export const ProjectScreen = () => {
                         {(project as Project).detailedDescription}
                       </Typography>
                     </Typography>
+
                     <Typography
-                      fontFamily="cursive"
                       fontSize={20}
                       fontWeight={900}
                       sx={{
@@ -256,25 +267,70 @@ export const ProjectScreen = () => {
                       Role:
                       <Typography
                         fontFamily="PromptSemiBold"
-                        color="#FAF1E4"
-                        fontSize={15}
+                        fontSize={17}
                         fontWeight={700}
+                        sx={{
+                          background:
+                            "linear-gradient(180deg,#84D2C5,#EEE7DA,#84D2C5)",
+                          WebkitBackgroundClip: "text",
+                          // fontFamily: "PromptBold",
+                          color: "transparent",
+                        }}
                       >
-                        {(project as Project).role}
+                        {(project as Project).impli1}
                       </Typography>
+                      {(project as Project).role1Des && (
+                        <Typography
+                          fontFamily="PromptSemiBold"
+                          color="#FAF1E4"
+                          fontSize={15}
+                          fontWeight={900}
+                        >
+                          {(project as Project).role1Des}
+                        </Typography>
+                      )}
                     </Typography>
-                    {(project as Project).additionalROleAndResp && (
-                      <Typography
-                        fontFamily="cursive"
-                        color="#FAF1E4"
-                        fontSize={15}
-                        fontWeight={700}
-                      >
-                        {(project as Project).additionalROleAndResp}
-                      </Typography>
-                    )}
+
                     <Typography
-                      fontFamily="cursive"
+                      fontSize={20}
+                      sx={{
+                        background:
+                          "linear-gradient(180deg,#84D2C5,#EEE7DA,#84D2C5)",
+                        WebkitBackgroundClip: "text",
+                        fontFamily: "PromptBold",
+                        color: "transparent",
+                      }}
+                    >
+                      {(project as Project).impli2 && (
+                        <Typography
+                          fontFamily="PromptSemiBold"
+                          fontSize={17}
+                          fontWeight={700}
+                          sx={{
+                            background:
+                              "linear-gradient(180deg,#84D2C5,#EEE7DA,#84D2C5)",
+                            WebkitBackgroundClip: "text",
+                            // fontFamily: "PromptBold",
+                            color: "transparent",
+                          }}
+                        >
+                          {(project as Project).impli2}
+                        </Typography>
+                      )}
+                      {(project as Project).role2Des && (
+                        <Typography
+                          fontFamily="PromptSemiBold"
+                          color="#FAF1E4"
+                          fontSize={15}
+                          fontWeight={900}
+                        >
+                          {(project as Project).role2Des}
+                        </Typography>
+                      )}
+                    </Typography>
+
+                    <Typography
+                      fontFamily="PromptSemiBold"
                       fontWeight={900}
                       fontSize={20}
                       sx={{

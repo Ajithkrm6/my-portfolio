@@ -33,17 +33,19 @@ export const SkillScreen = () => {
     <Section id="skills" data-aos="zoom-in">
       <Grid padding="3%">
         <Typography
-          variant="h3"
+          variant="h4"
+          color="#FFD95A"
+          fontFamily="PromptSemiBold"
           textAlign="start"
-          sx={{
-            fontSize: "30px",
-            background: "linear-gradient(45deg,#1D5B79, #84D2C5)",
-            WebkitBackgroundClip: "text",
-            fontFamily: "PromptSemiBold",
-            color: "#FFD95A",
-            fontWeight: "bold",
-            paddingTop: "15px",
-          }}
+          // sx={{
+          //   fontSize: "30px",
+          //   background: "linear-gradient(45deg,#1D5B79, #84D2C5)",
+          //   WebkitBackgroundClip: "text",
+          //   fontFamily: "PromptSemiBold",
+          //   color: "#FFD95A",
+          //   fontWeight: "bold",
+          //   paddingTop: "15px",
+          // }}
         >
           Skills
         </Typography>

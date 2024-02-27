@@ -139,7 +139,7 @@ export const ContactScreen = () => {
       <Grid padding="3%">
         <Typography
           textAlign="start"
-          variant="h3"
+          variant="h4"
           color="#FFD95A"
           fontFamily="PromptSemiBold"
         >

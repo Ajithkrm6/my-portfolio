@@ -175,7 +175,7 @@ export const HomeScreen = () => {
                   fontSize="15px"
                   padding={2}
                 >
-                  Hello..! I'm Ajith Kumar, a skilled Software Developer with 4
+                  Hello..! I'm Ajithh Kumar, a skilled Software Developer with 4
                   years of overall experience, including 2.5 years in front-end
                   technologies. Initially working with C and C++, I transitioned
                   to specializing in HTML, CSS, JavaScript, React.js, Redux,

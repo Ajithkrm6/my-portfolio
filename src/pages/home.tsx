@@ -128,7 +128,7 @@ export const HomeScreen = () => {
                   paddingTop: "15px",
                 }}
                 speed={50}
-                text="Ajith Kumar"
+                text="Ajithh Kumar"
               />
             </Grid>
             <Grid item>

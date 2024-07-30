@@ -16,7 +16,7 @@ export const HomeScreen = () => {
   const handleOffSet = () => setOffSetY(window.scrollY);
 
   const backgroundVideo = require("../assets/videos/blackhole.webm");
-  const resumePath = require("../assets/AjithKumarGandikota.pdf");
+  const resumePath = require("../assets/Ajithh_kumar.pdf");
   const controls = useAnimation();
   useEffect(() => {
     controls.start({
@@ -60,7 +60,7 @@ export const HomeScreen = () => {
   // });
 
   useEffect(() => {
-    const resumePath = require("../assets/AjithKumarGandikota.pdf");
+    const resumePath = require("../assets/Ajithh_kumar.pdf");
   }, []);
 
   return (

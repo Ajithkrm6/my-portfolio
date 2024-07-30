@@ -175,13 +175,15 @@ export const HomeScreen = () => {
                   fontSize="15px"
                   padding={2}
                 >
-                  Hello! I'm Ajith Kumar, a skilled Front End Developer with 1.7
-                  years of experience crafting engaging and responsive web
-                  applications. My expertise includes HTML, CSS, JavaScript,
-                  React.js, Redux, Next.js, TypeScript, React Native, and SQL.
-                  I've contributed to projects at Flying Fox Labs as a Software
-                  Developer. Explore my portfolio for innovative solutions, and
-                  let's create exceptional digital experiences together!
+                  Hello! I'm Ajith Kumar, a skilled Software Developer with 4
+                  years of overall experience, including 2.5 years in front-end
+                  technologies. Initially working with C and C++, I transitioned
+                  to specializing in HTML, CSS, JavaScript, React.js, Redux,
+                  Next.js, TypeScript, React Native, and SQL. I've contributed
+                  to innovative projects at Flying Fox Labs, delivering
+                  exceptional digital experiences. Explore my portfolio to see
+                  my work and let's create exceptional digital experiences
+                  together!
                 </Typography>
               </motion.div>
             </Grid>

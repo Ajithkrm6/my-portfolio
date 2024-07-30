@@ -5,6 +5,8 @@ import { SkillCard } from "../components/Card";
 
 export const SkillScreen = () => {
   const techSkillsData = [
+    { img: require("../assets/images/CLogo.png"), lable: "C" },
+    { img: require("../assets/images/CppLogo.png"), lable: "C++" },
     { img: require("../assets/images/html.png"), lable: "HTML" },
     { img: require("../assets/images/css.png"), lable: "CSS" },
     { img: require("../assets/images/js.png"), lable: "JavaScript" },

@@ -249,7 +249,7 @@ export const ContactScreen = () => {
                       style={{ height: "40px", width: "40px" }}
                     />
                   </Link>
-                  <Link
+                  {/* <Link
                     sx={{ paddingLeft: "8px" }}
                     href="https://www.linkedin.com/in/ajith-kumar-gandikota/"
                   >
@@ -262,7 +262,7 @@ export const ContactScreen = () => {
                         // paddingLeft: "5px",
                       }}
                     />
-                  </Link>
+                  </Link> */}
                 </Grid>
               </Grid>
             </Grid>

@@ -14,12 +14,14 @@ import experienceHub from "../assets/images/experiancehub.png";
 import zkpoker from "../assets/images/z1Zk.jpg";
 import CloseIcon from "@mui/icons-material/Close";
 import fallbackImg from "../assets/images/fallbackImg.jpg";
+import { Link } from "react-router-dom";
 
 export interface Project {
   id: number;
   img: string;
   title: string;
   description: string;
+  link?: string;
   role?: string;
   impli1?: string;
   role1Des?: string;
@@ -98,6 +100,7 @@ export const ProjectScreen = () => {
         "Html, CSS, React.Js, Next.Js, ReactNative,Storybook(to test the components in isolation).",
       detailedDescription:
         "A user dashboad where lots of stuff like charts , insights and more were included.",
+      link: "https://ajith-kumar-fitpeo-dashboard.netlify.app/",
     },
   ];
   console.log("project", project);
@@ -363,6 +366,35 @@ export const ProjectScreen = () => {
                         {(project as Project).technologiesUsed}
                       </Typography>
                     </Typography>
+
+                    {(project as Project).link && (
+                      <Typography
+                        fontFamily="PromptSemiBold"
+                        fontSize={17}
+                        fontWeight={700}
+                        sx={{
+                          background:
+                            "linear-gradient(180deg,#84D2C5,#EEE7DA,#84D2C5)",
+                          WebkitBackgroundClip: "text",
+                          // fontFamily: "PromptBold",
+                          color: "transparent",
+                        }}
+                      >
+                        Link :
+                        <a
+                          style={{
+                            fontFamily: "PromptSemiBold",
+                            fontSize: "16px",
+                            color: "#ffffff",
+                          }}
+                          href={(project as Project).link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          https://ajith-kumar-fitpeo-dashboard.netlify.app/
+                        </a>
+                      </Typography>
+                    )}
                   </Grid>
                 </Grid>
               </Grid>

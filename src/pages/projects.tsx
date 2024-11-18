@@ -13,6 +13,7 @@ import giftCards from "../assets/images/Premiumgiftcard.png";
 import experienceHub from "../assets/images/experiancehub.png";
 import zkpoker from "../assets/images/z1Zk.jpg";
 import CloseIcon from "@mui/icons-material/Close";
+import fallbackImg from "../assets/images/fallbackImg.jpg";
 
 export interface Project {
   id: number;
@@ -86,6 +87,17 @@ export const ProjectScreen = () => {
         "Html, CSS, React.Js, Next.Js, ReactNative,Storybook(to test the components in isolation).",
       detailedDescription:
         "ExperienceHub.AI is a versatile platform that offers a wide range of models designed to cater to various experiences. These models operate on different topologies, providing flexibility and efficiency for diverse use cases.",
+    },
+    {
+      id: 4,
+      title: "Fitpeo-Dashboard",
+      img: fallbackImg,
+      description: "A user Dashboad",
+      role: "As a front end developer my role is to develop all the require components and create pixel perfect design ",
+      technologiesUsed:
+        "Html, CSS, React.Js, Next.Js, ReactNative,Storybook(to test the components in isolation).",
+      detailedDescription:
+        "A user dashboad where lots of stuff like charts , insights and more were included.",
     },
   ];
   console.log("project", project);

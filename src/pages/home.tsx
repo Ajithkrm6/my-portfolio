@@ -16,7 +16,7 @@ export const HomeScreen = () => {
   const handleOffSet = () => setOffSetY(window.scrollY);
 
   const backgroundVideo = require("../assets/videos/blackhole.webm");
-  const resumePath = require("../assets/Ajithh_kumar.pdf");
+  const resumePath = require("../assets/Ajith-kumar.pdf");
   const controls = useAnimation();
   useEffect(() => {
     controls.start({
@@ -25,23 +25,6 @@ export const HomeScreen = () => {
       transition: { duration: 0.5, ease: "easeInOut", delay: 1 },
     });
   }, [controls]);
-
-  // const HeroContainer = styled("div")({
-  //   position: "relative",
-  //   display: "flex",
-  //   flexDirection: "column",
-  //   height: "100vh",
-  //   width: "100%",
-  // });
-
-  // const Video = styled("video")({
-  //   position: "absolute",
-  //   top: 0,
-  //   left: 0,
-  //   width: "100%",
-  //   height: "auto",
-  //   objectFit: "cover",
-  // });
 
   const Section = styled("section")({
     height: "100vh",
@@ -54,13 +37,8 @@ export const HomeScreen = () => {
     justifyContent: "center",
   });
 
-  // const Html = styled("html")({
-  //   scrollSnapType: "y",
-  //   scrollBehavior: "smooth",
-  // });
-
   useEffect(() => {
-    const resumePath = require("../assets/Ajithh_kumar.pdf");
+    const resumePath = require("../assets/Ajith-kumar.pdf");
   }, []);
 
   return (
@@ -175,15 +153,14 @@ export const HomeScreen = () => {
                   fontSize="15px"
                   padding={2}
                 >
-                  Hello..! I'm Ajithh Kumar, a skilled Software Developer with 4
-                  years of overall experience, including 2.5 years in front-end
-                  technologies. Initially working with C and C++, I transitioned
-                  to specializing in HTML, CSS, JavaScript, React.js, Redux,
-                  Next.js, TypeScript, React Native, and SQL. I've contributed
-                  to innovative projects at Flying Fox Labs, delivering
-                  exceptional digital experiences. Explore my portfolio to see
-                  my work and let's create exceptional digital experiences
-                  together!
+                  Hello..! I'm Ajith Kumar, a skilled Software Developer with 4+
+                  years of experience in software development, primarily
+                  specializing in front-end technologies. My expertise includes
+                  HTML, CSS, JavaScript, React.js, Redux, Next.js, TypeScript,
+                  React Native, and MYSQL. I take pride in delivering innovative
+                  solutions and exceptional digital experiences. Explore my
+                  portfolio to see my work, and let's create exceptional digital
+                  experiences together!
                 </Typography>
               </motion.div>
             </Grid>
